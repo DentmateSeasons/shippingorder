@@ -756,22 +756,19 @@
         
         .quantity-option-row {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 2px;
             margin-bottom: 3px;
+            width: 100%;
         }
         
         .quantity-option-row .option-label {
             font-size: 10px;
             color: #666;
-            min-width: auto;
-            margin-right: 2px;
             white-space: nowrap;
             width: 100%;
             text-align: center;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            margin-bottom: 2px;
         }
         
         .option-quantity-in-quantity-col {
@@ -792,22 +789,19 @@
         
         .gift-option-row {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 2px;
             margin-bottom: 3px;
+            width: 100%;
         }
         
         .gift-option-row .option-label {
             font-size: 10px;
             color: #666;
-            min-width: auto;
-            margin-right: 2px;
             white-space: nowrap;
             width: 100%;
             text-align: center;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            margin-bottom: 2px;
         }
         
         .option-gift-in-gift-col {
@@ -828,31 +822,27 @@
         
         .amount-option-row {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 2px;
             margin-bottom: 3px;
+            width: 100%;
             font-size: 10px;
         }
         
         .amount-option-row .option-label {
             font-size: 10px;
             color: #666;
-            min-width: auto;
-            margin-right: 2px;
             white-space: nowrap;
             width: 100%;
             text-align: center;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            margin-bottom: 2px;
         }
         
         .option-amount-in-amount-col {
             font-size: 10px;
             color: #27ae60;
             font-weight: bold;
-            min-width: 40px;
-            text-align: right;
+            text-align: center;
         }
         
         .amount-total-row {
@@ -1539,7 +1529,7 @@
                             
                             quantityHTML += `
                                 <div class="quantity-option-row">
-                                    <span class="option-label">${displayOption}:</span>
+                                    <span class="option-label">${displayOption}</span>
                                     <input type="number" class="option-quantity-in-quantity-col" min="0" value="${quantity}" 
                                            data-product-id="${product.id}" 
                                            data-client-id="${clientId}" 
@@ -1564,7 +1554,7 @@
                             
                             giftHTML += `
                                 <div class="gift-option-row">
-                                    <span class="option-label">${displayOption}:</span>
+                                    <span class="option-label">${displayOption}</span>
                                     <input type="number" class="option-gift-in-gift-col" min="0" value="${gift}" 
                                            data-product-id="${product.id}" 
                                            data-client-id="${clientId}" 
@@ -1589,7 +1579,7 @@
                             
                             amountHTML += `
                                 <div class="amount-option-row">
-                                    <span class="option-label">${displayOption}:</span>
+                                    <span class="option-label">${displayOption}</span>
                                     <span class="option-amount-in-amount-col" data-product-id="${product.id}" data-client-id="${clientId}" data-option="${option}">
                                         ${optionAmount > 0 ? '$' + optionAmount.toLocaleString() : ''}
                                     </span>
